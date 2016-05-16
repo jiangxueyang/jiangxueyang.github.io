@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全屏</title>
+	<link rel="stylesheet" type="text/css" href="../common/reset.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/css.css">
+	<script src="../common/jquery.min.js"></script>
+</head>
+<body>
+	<div id="box">
+		<video id="oVideo" loop>
+			<source src='test.mp4' type="video/mp4"></source>
+			<source src='movie.ogg' type="video/ogg"></source>
+			您的浏览器不支持此功能
+		</video>
+		<div id="bar" class="clearfix">
+			<div class="playBar fl">
+				<span id="switchT"><i class="iconfont start">&#xe604;</i>
+				<i class="iconfont stop">&#xe60e;</i></span>
+				<span class="prev"><i class="iconfont ">&#xe60b;</i></span>
+				<span class="next"><i class="iconfont">&#xe610;</i></span>
+			</div>
+			<div class="timeBar fl">
+				<p id="videoDur"></p>				
+			</div>			
+			
+			<div class="fr fullBar">	
+				<span class="time">
+					<time class="minute">00</time>:
+					<time class="second">00</time>	
+				</span>
+				<span class="volumeCtrl">
+					<span class='show'>
+						<i class="iconfont">&#xe608;</i>
+					</span>
+					<div class="volumebox">
+						<div id="volume"></div>
+					</div>
+				</span>
+
+				<span id="full"><i class="iconfont">&#xe601;</i></span>	
+				<span id="cancelFull"><i class="iconfont">&#xe603;</i></span>
+			</div>	
+			
+		</div>	
+		<div class="maskPlay"></div>
+	</div>
+	<script src="fullScreen.js"></script>
+</body>
+</html>

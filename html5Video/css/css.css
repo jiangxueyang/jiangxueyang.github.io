@@ -1,0 +1,47 @@
+*{padding:0;margin:0;}
+html,body{width:100%;}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.iconfont{font-size:20px;line-height: 40px}
+#box{width:600px;height:360px;margin:20px auto;position:relative;overflow: hidden;}
+#oVideo{width:100%;position: absolute;left:0;top:50%;transform: translate3d(0,-50%,0);}
+#bar{width:100%;position: absolute;bottom:0;left:0;font-size:12px;color:#fff;z-index:1000;height:40px;
+	background:#232323;color:#4f4f4f;}
+#bar span{cursor:pointer;line-height: 40px;}
+.playBar{width:15%;height: 100%;display:flex;justify-content: space-around;}
+.playBar .iconfont{color:#4f4f4f;}
+// .playBar #switchT{}
+#switchT .stop{display: none}
+/* 时间条 */
+.timeBar{width:65%;height:10px;background:rgba(255,255,255,.5);position:absolute;border-radius:5px;
+top:50%;margin-top:-5px;left:15%;}
+.timeBar #videoDur{width:0;height: 100%;border-radius:5px;background:#1c7d5a;}
+
+
+
+.fullBar{width:20%;display:flex;justify-content: space-around;}
+.fullBar .time{margin:0 5px;font-weight:800;font-size:16px}
+.volumeCtrl{position: relative;}
+.volumeCtrl .volumebox{position: absolute;width:34px;height:80px;background:#232323;left:-10px;bottom:50px;
+border:3px solid #232323;display: none;transform: rotateZ(180deg);}
+.volumeCtrl .volumebox #volume{width:100%;height:20%;background:#1c7d5a;}
+
+
+
+
+/* 视频全屏 */
+#bar #cancelFull{display: none}
+
+/* 全屏时不显示 */
+video::-webkit-media-controls-enclosure{
+	display: none!important
+}
+
+
+/* 屏幕中间播放暂停 */
+.maskPlay{width:80px;height: 60px;position: absolute;left:50%;top:50%;
+	margin: -30px 0 0 -40px;background:rgba(0,0,0,.6);border-radius: 5px;z-index: 1000;cursor:pointer;}
+.maskPlay:hover{background: rgb(0,0,0)}
+.maskPlay::before{border:20px solid transparent;border-left:30px solid #fff;width:0;height: 0;position: absolute;
+left:30px;top:10px;content:"";}
